@@ -763,12 +763,18 @@ export default async function BlogDetails({
   // GET SINGLE BLOG
   // =====================================================
 
+  // const response = await fetch(
+  //   `http://localhost:3000/api/blog-by-slug/${slug}`,
+  //   {
+  //     cache: "no-store",
+  //   }
+  // );
   const response = await fetch(
-    `http://localhost:3000/api/blog-by-slug/${slug}`,
-    {
-      cache: "no-store",
-    }
-  );
+  `${process.env.NEXTAUTH_URL}/api/blog-by-slug/${slug}`,
+  {
+    cache: "no-store",
+  }
+);
 
   if (!response.ok) {
     notFound();
