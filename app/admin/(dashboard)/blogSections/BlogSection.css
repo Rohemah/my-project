@@ -1,0 +1,797 @@
+
+/* =========================================================
+   BLOG SECTION PAGE
+========================================================= */
+
+.blog-section-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 40px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.blog-section-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.blog-section-page table {
+  width: 100%;
+  min-width: 750px;
+
+  border-collapse: collapse;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.blog-section-page thead {
+  background: #f1f5f9;
+}
+
+.blog-section-page th {
+  padding: 18px;
+
+  text-align: left;
+
+  color: #475569;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.blog-section-page td {
+  padding: 18px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  color: #334155;
+
+  font-size: 15px;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================================
+   ROW HOVER
+========================================================= */
+
+.blog-section-page tbody tr {
+  transition: background 0.2s ease;
+}
+
+.blog-section-page tbody tr:hover {
+  background: #f8fafc;
+}
+
+.blog-section-page tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   HEADING COLUMN
+========================================================= */
+
+.blog-section-page td:first-child {
+  max-width: 400px;
+
+  color: #111827;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   DISPLAY ORDER
+========================================================= */
+
+.blog-section-page td:nth-child(3) {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   LAST COLUMN
+========================================================= */
+
+.blog-section-page td:last-child {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   EDIT LINK
+========================================================= */
+.edit-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+  height: 38px;
+
+  background: #16a34a;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-link:hover {
+  background: #15803d;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   EDIT + DELETE COMMON
+========================================================= */
+
+.edit-btn,
+.delete-btn {
+  width: 90px;
+  height: 38px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: all 0.25s ease;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   EDIT BUTTON
+========================================================= */
+
+.edit-btn {
+  background: #16a34a;
+}
+
+.edit-btn:hover {
+  background: #15803d;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CREATE / EDIT PAGE
+========================================================= */
+
+.create-page,
+.edit-page {
+  min-height: 100vh;
+
+  background: #f8fafc;
+
+  padding: 40px;
+}
+
+
+/* =========================================================
+   CREATE / EDIT CARD
+========================================================= */
+
+.create-card,
+.edit-card {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CREATE / EDIT TITLE
+========================================================= */
+
+.create-card h1,
+.edit-card h1 {
+  margin: 0 0 30px;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.create-form,
+.edit-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.form-group label {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+
+/* =========================================================
+   INPUT / TEXTAREA / SELECT
+========================================================= */
+
+.create-form input,
+.create-form textarea,
+.create-form select,
+.edit-form input,
+.edit-form textarea,
+.edit-form select {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  box-sizing: border-box;
+
+  transition: all 0.2s ease;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.create-form input::placeholder,
+.create-form textarea::placeholder,
+.edit-form input::placeholder,
+.edit-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.create-form select,
+.edit-form select {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.create-form textarea,
+.edit-form textarea {
+  min-height: 170px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
+.create-form input:focus,
+.create-form textarea:focus,
+.create-form select:focus,
+.edit-form input:focus,
+.edit-form textarea:focus,
+.edit-form select:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================================================
+   HELP TEXT
+========================================================= */
+
+.form-group small {
+  font-size: 13px;
+
+  color: #64748b;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.image-preview {
+  padding: 15px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+}
+
+.image-preview p {
+  margin: 0 0 12px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #475569;
+}
+
+.image-preview img {
+  display: block;
+
+  width: 100%;
+
+  max-width: 400px;
+
+  max-height: 230px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  border: 1px solid #e5e7eb;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding-top: 20px;
+
+  margin-top: 5px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+
+/* =========================================================
+   CREATE / UPDATE BUTTON
+========================================================= */
+
+.create-btn,
+.update-btn {
+  min-width: 200px;
+
+  padding: 14px 20px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.create-btn:hover,
+.update-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+========================================================= */
+
+.create-btn:disabled,
+.update-btn:disabled {
+  background: #93c5fd;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+.cancel-btn {
+  min-width: 110px;
+
+  padding: 14px 20px;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.cancel-btn:hover {
+  background: #f8fafc;
+
+  border-color: #9ca3af;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading-state {
+  min-height: 300px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   TABLE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .blog-section-page {
+    padding: 20px;
+  }
+
+  .section-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .section-header h1 {
+    font-size: 26px;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+
+  .blog-section-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .blog-section-page table {
+    min-width: 700px;
+  }
+
+  .actions {
+    gap: 8px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 82px;
+
+    height: 36px;
+
+    font-size: 13px;
+  }
+
+  .create-page,
+  .edit-page {
+    padding: 20px;
+  }
+
+  .create-card,
+  .edit-card {
+    padding: 30px 25px;
+  }
+
+  .create-card h1,
+  .edit-card h1 {
+    font-size: 26px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .blog-section-page {
+    padding: 15px;
+  }
+
+  .section-header h1 {
+    font-size: 23px;
+  }
+
+  .create-page,
+  .edit-page {
+    padding: 15px;
+  }
+
+  .create-card,
+  .edit-card {
+    padding: 22px 18px;
+
+    border-radius: 12px;
+  }
+
+  .create-card h1,
+  .edit-card h1 {
+    font-size: 22px;
+
+    margin-bottom: 24px;
+  }
+
+  .create-form,
+  .edit-form {
+    gap: 18px;
+  }
+
+  .create-form input,
+  .create-form textarea,
+  .create-form select,
+  .edit-form input,
+  .edit-form textarea,
+  .edit-form select {
+    padding: 12px 13px;
+
+    font-size: 14px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .create-btn,
+  .update-btn,
+  .cancel-btn {
+    width: 100%;
+
+    min-width: 100%;
+  }
+
+}
+

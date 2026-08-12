@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.signin-navbar{
+    width:100%;
+    height:90px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+    border-bottom:1px solid #ececec;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+/* Logo */
+
+.signin-logo h2{
+    color:#ef2b2d;
+    font-size:52px;
+    font-weight:700;
+}
+
+/* Course Button */
+
+.signin-course{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:1px solid white;
+    padding:14px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:20px;
+    font-weight:700;
+}
+
+.signin-course svg{
+    font-size:20px;
+}
+
+/* Nav Links */
+
+.signin-links{
+    display:flex;
+    gap:40px;
+}
+
+.signin-links a{
+    text-decoration:none;
+    color:#111;
+    font-size:20px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.signin-links a:hover{
+    color:#ef2b2d;
+}
+
+/* Right Side */
+
+.signin-right{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+/* Cart */
+
+.signin-cart{
+    position:relative;
+    font-size:32px;
+    cursor:pointer;
+}
+
+.signin-cart span{
+    position:absolute;
+    right:-8px;
+    top:-10px;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#ef2b2d;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+}
+
+/* Button */
+
+.signin-btn{
+    background:#111;
+    color:#fff;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.signin-btn:hover{
+    background:#ef2b2d;
+}

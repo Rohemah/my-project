@@ -1,0 +1,523 @@
+/* =========================
+User Page
+========================= */
+
+
+.user-page {
+
+    min-height:100vh;
+
+    background:#f8fafc;
+
+    padding:40px;
+
+}
+
+
+
+
+
+/* Header */
+
+
+.user-header {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.user-header h1 {
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+
+
+
+
+
+/* Add Button */
+
+
+.add-btn {
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.add-btn:hover {
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+
+
+/* Table */
+
+
+.user-page table {
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+
+
+.user-page thead {
+
+    background:#f1f5f9;
+
+}
+
+
+
+
+
+.user-page th {
+
+    padding:18px;
+
+    text-align:left;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#475569;
+
+}
+
+
+
+
+
+.user-page td {
+
+    padding:18px;
+
+    border-bottom:1px solid #e5e7eb;
+
+    color:#334155;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+.user-page tbody tr:hover {
+
+    background:#f8fafc;
+
+}
+
+
+
+
+
+
+/* Role Badge */
+
+
+.role {
+
+    padding:6px 12px;
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+
+/* Actions */
+
+
+.actions {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+.actions a {
+
+    text-decoration:none;
+
+}
+
+
+
+
+
+
+.edit-btn,
+.delete-btn {
+
+
+    width:90px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:8px;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.3s;
+
+}
+
+
+
+
+
+/* Edit */
+
+
+.edit-btn {
+
+    background:#16a34a;
+
+}
+
+
+
+.edit-btn:hover {
+
+    background:#15803d;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+
+
+/* Delete */
+
+
+.delete-btn {
+
+    background:#dc2626;
+
+}
+
+
+
+.delete-btn:hover {
+
+    background:#b91c1c;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+
+
+
+/* =========================
+Create / Edit Form
+========================= */
+
+
+.create-page,
+.edit-page {
+
+    min-height:100vh;
+
+    background:#f8fafc;
+
+    padding:40px;
+
+}
+
+
+
+
+
+
+.create-card,
+.edit-card {
+
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+
+
+
+.create-card h1,
+.edit-card h1 {
+
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+
+.create-form,
+.edit-form {
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+
+
+
+.create-form input,
+.create-form select,
+
+.edit-form input,
+.edit-form select {
+
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    background:white;
+
+}
+
+
+
+
+
+
+.create-form input:focus,
+.create-form select:focus,
+
+.edit-form input:focus,
+.edit-form select:focus {
+
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+
+
+
+
+
+
+.create-btn,
+.update-btn {
+
+
+    width:200px;
+
+    padding:14px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+.create-btn:hover,
+.update-btn:hover {
+
+
+    background:#1d4ed8;
+
+}
+
+
+
+
+
+
+
+@media(max-width:768px){
+
+
+.user-page {
+
+    padding:20px;
+
+}
+
+
+
+.user-page table {
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+
+
+.user-header {
+
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+
+
+.create-page,
+.edit-page {
+
+    padding:20px;
+
+}
+
+
+
+.create-card,
+.edit-card {
+
+    padding:25px;
+
+}
+
+
+}

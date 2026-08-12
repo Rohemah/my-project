@@ -1,0 +1,110 @@
+.create-instructor-page{
+
+max-width:800px;
+
+background:white;
+
+padding:40px;
+
+border-radius:16px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+.create-instructor-page h1{
+
+font-size:30px;
+
+color:#0f172a;
+
+margin-bottom:30px;
+
+}
+
+
+
+.create-instructor-page form{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+
+
+.create-instructor-page label{
+
+margin-top:18px;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+color:#334155;
+
+}
+
+
+
+.create-instructor-page input,
+.create-instructor-page textarea{
+
+padding:14px;
+
+border:1px solid #cbd5e1;
+
+border-radius:10px;
+
+font-size:15px;
+
+outline:none;
+
+}
+
+
+
+.create-instructor-page input:focus,
+.create-instructor-page textarea:focus{
+
+border-color:#2563eb;
+
+}
+
+
+
+
+
+.create-instructor-page button{
+
+margin-top:30px;
+
+width:220px;
+
+padding:14px;
+
+border:none;
+
+border-radius:10px;
+
+background:#2563eb;
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+
+
+.create-instructor-page button:hover{
+
+background:#1d4ed8;
+
+}

@@ -1,0 +1,438 @@
+/* .blog-page {
+  padding: 40px;
+  min-height: 100vh;
+  background: #f8fafc;
+} */
+
+/* Header */
+/* 
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.blog-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+} */
+
+/* Add Button */
+/* 
+.add-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Table */
+
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+thead {
+  background: #f1f5f9;
+}
+
+th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 700;
+}
+
+td {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #334155;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+tbody tr {
+  transition: .2s;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+} */
+
+/* Action Buttons */
+
+/* .action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.action-buttons a {
+  text-decoration: none;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+  white-space: nowrap;
+}
+
+.edit-btn {
+  background: #16a34a;
+}
+
+.edit-btn:hover {
+  background: #15803d;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+/* Responsive */
+
+/* @media (max-width:768px) {
+
+  .blog-page {
+    padding: 20px;
+  }
+
+  .blog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .blog-header h1 {
+    font-size: 24px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+} */
+
+/* =========================
+   BLOG PAGE
+========================= */
+
+.blog-page {
+  padding: 40px;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.blog-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.add-btn {
+  background: #2563eb;
+  color: #fff;
+
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.blog-page table {
+  width: 100%;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  background: #fff;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.blog-page thead {
+  background: #f1f5f9;
+}
+
+.blog-page th {
+  padding: 16px;
+
+  text-align: left;
+
+  font-size: 14px;
+
+  color: #475569;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   TABLE BODY
+========================= */
+
+.blog-page td {
+  padding: 16px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  color: #334155;
+
+  font-size: 15px;
+
+  vertical-align: middle;
+}
+
+.blog-page tbody tr {
+  transition: 0.2s;
+}
+
+.blog-page tbody tr:hover {
+  background: #f8fafc;
+}
+
+
+/* =========================
+   ACTION COLUMN
+========================= */
+
+.blog-page th:last-child,
+.blog-page td:last-child {
+  width: 180px;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-buttons {
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 8px;
+
+  flex-wrap: nowrap;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   ACTION LINKS
+========================= */
+
+.action-buttons a {
+  text-decoration: none;
+
+  display: inline-flex;
+}
+
+
+/* =========================
+   EDIT + DELETE
+========================= */
+
+.edit-btn,
+.delete-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 70px;
+
+  height: 36px;
+
+  padding: 0 12px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =========================
+   EDIT BUTTON
+========================= */
+
+.edit-btn {
+  background: #16a34a;
+}
+
+.edit-btn:hover {
+  background: #15803d;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   NO BLOGS
+========================= */
+
+.no-blogs {
+  padding: 40px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .blog-page {
+    padding: 20px;
+  }
+
+  .blog-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .blog-header h1 {
+    font-size: 24px;
+  }
+
+  .blog-page table {
+    display: block;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+  }
+
+  .action-buttons {
+    flex-wrap: nowrap;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    min-width: 65px;
+
+    padding: 0 10px;
+  }
+}
+

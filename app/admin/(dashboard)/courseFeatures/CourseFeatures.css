@@ -1,0 +1,486 @@
+.course-feature-page {
+  padding: 30px;
+}
+
+
+/* Header */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+
+.page-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+
+.page-header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+
+
+/* Add Button */
+
+.add-btn {
+
+  background: #2563eb;
+
+  color: white;
+
+  padding: 12px 22px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+}
+
+
+.add-btn:hover {
+
+  background:#1d4ed8;
+
+}
+
+
+
+/* Table Container */
+
+.table-container {
+
+  background:white;
+
+  padding:25px;
+
+  border-radius:15px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  overflow-x:auto;
+
+}
+
+
+
+/* Table */
+
+table {
+
+  width:100%;
+
+  border-collapse:collapse;
+
+}
+
+
+
+thead {
+
+  background:#f8fafc;
+
+}
+
+
+
+th {
+
+  padding:16px;
+
+  text-align:left;
+
+  font-size:14px;
+
+  color:#334155;
+
+  font-weight:700;
+
+}
+
+
+
+td {
+
+  padding:16px;
+
+  border-bottom:1px solid #e2e8f0;
+
+  color:#475569;
+
+  font-size:14px;
+
+}
+
+
+
+tbody tr:hover {
+
+  background:#f8fafc;
+
+}
+
+
+/* Actions Column */
+
+td:last-child {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  white-space:nowrap;
+
+}
+
+
+
+/* Edit Button */
+
+.edit-btn {
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  height:36px;
+
+  padding:0 18px;
+
+  background:#22c55e;
+
+  color:white;
+
+  border-radius:8px;
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  transition:0.3s;
+
+}
+
+
+.edit-btn:hover {
+
+  background:#16a34a;
+
+}
+
+
+/* Actions */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* Edit Button */
+
+.edit-btn {
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  height:38px;
+
+  padding:0 18px;
+
+  background:#16a34a;
+
+  color:white;
+
+  border-radius:8px;
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  transition:0.3s;
+
+}
+
+
+.edit-btn:hover {
+
+  background:#15803d;
+
+}
+
+
+
+/* Delete Button */
+
+.delete-btn {
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  height:38px;
+
+  padding:0 18px;
+
+  background:#ef4444;
+
+  color:white;
+
+  border:none;
+
+  border-radius:8px;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:all .3s ease;
+
+}
+
+
+
+.delete-btn:hover {
+
+  background:#dc2626;
+
+  transform:translateY(-2px);
+
+}
+
+
+
+/* Overlay */
+
+.modal-overlay {
+
+  position:fixed;
+
+  top:0;
+
+  left:0;
+
+  width:100%;
+
+  height:100%;
+
+  background:rgba(15,23,42,0.55);
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  z-index:999;
+
+}
+
+
+
+/* Delete Modal */
+
+.delete-modal {
+
+  width:420px;
+
+  background:white;
+
+  padding:35px;
+
+  border-radius:18px;
+
+  text-align:center;
+
+  box-shadow:0 20px 50px rgba(0,0,0,0.2);
+
+  animation:popup .25s ease;
+
+}
+
+
+
+@keyframes popup {
+
+  from{
+
+    transform:scale(.9);
+
+    opacity:0;
+
+  }
+
+  to{
+
+    transform:scale(1);
+
+    opacity:1;
+
+  }
+
+}
+
+
+
+.delete-modal h2 {
+
+  font-size:24px;
+
+  color:#1e293b;
+
+  margin-bottom:15px;
+
+}
+
+
+
+.delete-modal p {
+
+  color:#64748b;
+
+  line-height:1.6;
+
+}
+
+
+
+/* Modal Buttons */
+
+.modal-actions {
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:15px;
+
+  margin-top:30px;
+
+}
+
+
+
+.cancel-btn {
+
+  padding:12px 25px;
+
+  background:#e2e8f0;
+
+  color:#334155;
+
+  border:none;
+
+  border-radius:8px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+}
+
+
+
+.cancel-btn:hover {
+
+  background:#cbd5e1;
+
+}
+
+
+
+.confirm-delete {
+
+  padding:12px 25px;
+
+  background:#dc2626;
+
+  color:white;
+
+  border:none;
+
+  border-radius:8px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+}
+
+
+
+.confirm-delete:hover {
+
+  background:#b91c1c;
+
+}
+
+/* Empty State */
+
+.empty {
+
+  text-align:center;
+
+  padding:40px;
+
+  color:#94a3b8;
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:768px){
+
+
+  .course-feature-page {
+
+    padding:15px;
+
+  }
+
+
+  .page-header {
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+  }
+
+
+  table {
+
+    min-width:700px;
+
+  }
+
+}

@@ -1,0 +1,113 @@
+/* Page */
+
+.edit-blog-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 40px;
+}
+
+/* Heading */
+
+.edit-blog-page h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 30px;
+}
+
+/* Form */
+
+.edit-form {
+  max-width: 900px;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Form Group */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+/* Labels */
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+  background: #fff;
+  color: #111827;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Textarea */
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+  font-family: inherit;
+}
+
+/* Button */
+
+.submit-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .edit-blog-page {
+    padding: 20px;
+  }
+
+  .edit-form {
+    padding: 20px;
+  }
+
+  .edit-blog-page h1 {
+    font-size: 26px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}

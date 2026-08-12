@@ -1,0 +1,43 @@
+.create-description-page{
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+}
+
+.create-description-page h1{
+    margin-bottom:25px;
+}
+
+.create-description-page form{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.create-description-page label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.create-description-page select,
+.create-description-page textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.create-description-page button{
+    margin-top:25px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}

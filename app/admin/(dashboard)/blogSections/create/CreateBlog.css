@@ -1,0 +1,465 @@
+/* .create-page {
+
+    min-height:100vh;
+
+    background:#f8fafc;
+
+    padding:40px;
+
+}
+
+
+
+.create-card {
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+.create-card h1 {
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.create-form {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+.create-form input,
+.create-form textarea,
+.create-form select {
+
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    color:#111827;
+
+    outline:none;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+
+
+.create-form textarea {
+
+
+    min-height:180px;
+
+    resize:vertical;
+
+}
+
+
+
+.create-form select {
+
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+.create-form input:focus,
+.create-form textarea:focus,
+.create-form select:focus {
+
+
+    border-color:#2563eb;
+
+    box-shadow:
+
+    0 0 0 3px rgba(37,99,235,.15);
+
+
+}
+
+
+
+
+
+.create-btn {
+
+
+    width:200px;
+
+    padding:14px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+
+}
+
+
+
+.create-btn:hover {
+
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+.create-page{
+
+    padding:20px;
+
+}
+
+
+
+.create-card{
+
+    padding:25px;
+
+}
+
+
+} */
+
+/* =========================
+   PAGE
+========================= */
+
+.edit-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 50px 30px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.edit-card {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06);
+
+  border: 1px solid #e5e7eb;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.edit-card h1 {
+  margin: 0;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.form-description {
+  margin-top: 8px;
+  margin-bottom: 32px;
+
+  font-size: 15px;
+
+  color: #6b7280;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.edit-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.form-group label {
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+
+/* =========================
+   INPUT / SELECT / TEXTAREA
+========================= */
+
+.edit-form input,
+.edit-form select,
+.edit-form textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.edit-form input::placeholder,
+.edit-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.edit-form select {
+  cursor: pointer;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.edit-form textarea {
+  min-height: 180px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   FOCUS
+========================= */
+
+.edit-form input:focus,
+.edit-form select:focus,
+.edit-form textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================
+   HELP TEXT
+========================= */
+
+.form-group small {
+  font-size: 13px;
+
+  color: #6b7280;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   CREATE BUTTON
+========================= */
+
+.create-btn {
+  width: 220px;
+
+  margin-top: 8px;
+
+  padding: 14px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.create-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   BUTTON DISABLED
+========================= */
+
+.create-btn:disabled {
+  background: #93c5fd;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .edit-page {
+    padding: 25px 15px;
+  }
+
+  .edit-card {
+    padding: 25px 20px;
+
+    border-radius: 14px;
+  }
+
+  .edit-card h1 {
+    font-size: 26px;
+  }
+
+  .form-description {
+    font-size: 14px;
+
+    margin-bottom: 25px;
+  }
+
+  .create-btn {
+    width: 100%;
+  }
+
+}
+

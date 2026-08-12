@@ -1,0 +1,161 @@
+.create-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 40px;
+}
+
+.create-card {
+  max-width: 850px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.create-card h1 {
+  margin: 0 0 30px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Form Group */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Labels */
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Inputs */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+/* Select */
+
+.form-group select {
+  cursor: pointer;
+}
+
+/* Textarea */
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Focus */
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Buttons */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cancel-btn,
+.create-btn {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Cancel */
+
+.cancel-btn {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+/* Create */
+
+.create-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.create-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .create-page {
+    padding: 20px;
+  }
+
+  .create-card {
+    padding: 25px;
+  }
+
+  .create-card h1 {
+    font-size: 26px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .cancel-btn,
+  .create-btn {
+    width: 100%;
+  }
+}
+

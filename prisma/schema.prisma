@@ -1,0 +1,223 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id            Int          @id @default(autoincrement())
+  fullName      String
+  email         String       @unique
+  passwordHash  String
+  role          String
+  createdAt     DateTime     @default(now())
+
+  enrollments   Enrollment[]
+}
+model Category {
+  id      Int    @id @default(autoincrement())
+  name    String
+
+  courses Course[]
+  blogs   Blog[]
+
+  @@map("Category")
+}
+
+model Course {
+  id                    Int                     @id @default(autoincrement())
+  categoryId            Int
+
+  title                 String
+  slug                  String                  @unique
+  price                 Decimal?
+  buyButtonText         String?
+  lessons               Int?
+  description           String?
+  duration              String?
+  lectures              Int?
+  skillLevel            String?
+  videoDuration         String?
+  participants          String?
+  image                 String?
+
+  category              Category                @relation(fields: [categoryId], references: [id])
+
+  descriptions          CourseDescription[]
+  features              CourseFeature[]
+  highlightInfo         CourseHighlightInfo[]
+  highlights            CourseHighlight[]
+  modules               Module[]
+  courseInstructors     CourseInstructor[]
+  enrollments           Enrollment[]
+}
+
+model CourseDescription {
+  id              Int      @id @default(autoincrement())
+  courseId        Int
+
+  descriptionOne  String?
+  descriptionTwo  String?
+
+  course          Course   @relation(fields: [courseId], references: [id])
+}
+
+model CourseFeature {
+  id        Int     @id @default(autoincrement())
+  courseId  Int
+
+  feature   String
+
+  course    Course  @relation(fields: [courseId], references: [id])
+}
+
+model CourseHighlightInfo {
+  id          Int      @id @default(autoincrement())
+  courseId    Int
+
+  title       String?
+  description String?
+  footer      String?
+
+  course      Course   @relation(fields: [courseId], references: [id])
+}
+
+model CourseHighlight {
+  id         Int      @id @default(autoincrement())
+  courseId   Int
+
+  highlight  String
+
+  course     Course   @relation(fields: [courseId], references: [id])
+}
+
+model Module {
+  id          Int      @id @default(autoincrement())
+  courseId    Int
+
+  moduleName  String
+  hours       String?
+  title       String?
+  image       String?
+
+  course      Course   @relation(fields: [courseId], references: [id])
+
+  topics      ModuleTopic[]
+}
+
+model ModuleTopic {
+  id         Int      @id @default(autoincrement())
+  moduleId   Int
+
+  topic      String
+
+  module     Module   @relation(fields: [moduleId], references: [id])
+}
+
+model Instructor {
+  id            Int                 @id @default(autoincrement())
+
+  name          String
+  role          String?
+  students      String?
+  description   String?
+  image         String?
+
+  skills        InstructorSkill[]
+  courses       CourseInstructor[]
+}
+
+model InstructorSkill {
+  id             Int          @id @default(autoincrement())
+  instructorId   Int
+
+  skill          String
+
+  instructor     Instructor   @relation(fields: [instructorId], references: [id])
+}
+
+model CourseInstructor {
+  id             Int          @id @default(autoincrement())
+
+  courseId       Int
+  instructorId   Int
+
+  course         Course       @relation(fields: [courseId], references: [id])
+  instructor     Instructor   @relation(fields: [instructorId], references: [id])
+}
+
+model Blog {
+  id         Int      @id @default(autoincrement())
+  categoryId Int
+
+  title      String
+  slug       String   @unique
+
+  author      String
+  authorRole  String?
+  authorImage String?
+  authorLink  String?
+
+  date       DateTime
+  image      String?
+
+  articleOne String?
+  articleTwo String?
+
+  category   Category @relation(fields: [categoryId], references: [id])
+
+  sections   BlogSection[]
+  lists      BlogList[]
+}
+
+model BlogSection {
+  id           Int      @id @default(autoincrement())
+  blogId       Int
+
+  heading      String?
+  paragraph    String?
+  image        String?
+  video        String?
+  displayOrder Int
+
+  blog         Blog       @relation(fields: [blogId], references: [id])
+
+  lists        BlogList[]
+}
+
+model BlogList {
+  id             Int      @id @default(autoincrement())
+  blogId         Int
+  sectionId      Int?
+
+  listHeading    String
+  listParagraph  String?
+
+  blog           Blog         @relation(fields: [blogId], references: [id])
+  section        BlogSection? @relation(fields: [sectionId], references: [id])
+
+  items          BlogListItem[]
+}
+
+model BlogListItem {
+  id       Int    @id @default(autoincrement())
+  listId   Int
+  itemText String
+
+  list     BlogList @relation(fields: [listId], references: [id])
+}
+model Enrollment {
+  id            Int       @id @default(autoincrement())
+
+  userId        Int
+  courseId      Int
+
+  enrolledDate  DateTime  @default(now())
+  status        String
+
+  user          User      @relation(fields: [userId], references: [id])
+  course        Course    @relation(fields: [courseId], references: [id])
+}

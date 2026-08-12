@@ -1,0 +1,95 @@
+.create-feature-page{
+
+max-width:700px;
+
+background:white;
+
+padding:35px;
+
+border-radius:12px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+
+.create-feature-page h1{
+
+font-size:28px;
+
+margin-bottom:25px;
+
+color:#1e293b;
+
+}
+
+
+
+.create-feature-page form{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+
+.create-feature-page label{
+
+margin-top:15px;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+color:#334155;
+
+}
+
+
+
+.create-feature-page select,
+.create-feature-page textarea{
+
+padding:14px;
+
+border:1px solid #cbd5e1;
+
+border-radius:8px;
+
+font-size:15px;
+
+}
+
+
+
+.create-feature-page button{
+
+margin-top:25px;
+
+padding:14px;
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+
+
+.create-feature-page button:hover{
+
+background:#1d4ed8;
+
+}

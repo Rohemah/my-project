@@ -1,0 +1,129 @@
+.edit-instructor-skill-page{
+
+    max-width:800px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:16px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+/* Heading */
+
+.edit-instructor-skill-page h1{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* Form */
+
+.edit-instructor-skill-page form{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+/* Labels */
+
+.edit-instructor-skill-page label{
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+
+
+
+
+/* Select + Input */
+
+.edit-instructor-skill-page select,
+.edit-instructor-skill-page input{
+
+    padding:14px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+
+
+.edit-instructor-skill-page select:focus,
+.edit-instructor-skill-page input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.1);
+
+}
+
+
+
+
+
+/* Button */
+
+.edit-instructor-skill-page button{
+
+    margin-top:30px;
+
+    width:220px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.edit-instructor-skill-page button:hover{
+
+    background:#1d4ed8;
+
+}

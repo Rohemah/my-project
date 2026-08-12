@@ -1,0 +1,249 @@
+
+/* =========================
+   EDIT BLOG LIST PAGE
+========================= */
+
+.edit-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 50px 30px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.edit-card {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.edit-card h1 {
+  margin: 0 0 8px;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.form-description {
+  margin: 0 0 30px;
+
+  color: #6b7280;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.edit-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.form-group label {
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+
+/* =========================
+   INPUT + SELECT + TEXTAREA
+========================= */
+
+.edit-form input,
+.edit-form select,
+.edit-form textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.edit-form input::placeholder,
+.edit-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.edit-form select {
+  cursor: pointer;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.edit-form textarea {
+  min-height: 180px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   FOCUS
+========================= */
+
+.edit-form input:focus,
+.edit-form select:focus,
+.edit-form textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================
+   UPDATE BUTTON
+========================= */
+
+.update-btn {
+  width: 200px;
+
+  margin-top: 8px;
+
+  padding: 14px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.update-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .edit-page {
+    padding: 25px 15px;
+  }
+
+  .edit-card {
+    padding: 25px 20px;
+
+    border-radius: 14px;
+  }
+
+  .edit-card h1 {
+    font-size: 26px;
+  }
+
+  .form-description {
+    font-size: 14px;
+  }
+
+  .update-btn {
+    width: 100%;
+  }
+}
+

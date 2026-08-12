@@ -1,0 +1,96 @@
+.edit-topic-page{
+
+max-width:800px;
+
+background:white;
+
+padding:40px;
+
+border-radius:16px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+.edit-topic-page h1{
+
+font-size:30px;
+
+color:#0f172a;
+
+margin-bottom:30px;
+
+}
+
+
+
+.edit-topic-page form{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+
+.edit-topic-page label{
+
+margin-top:18px;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+color:#334155;
+
+}
+
+
+
+.edit-topic-page select,
+.edit-topic-page textarea{
+
+padding:14px;
+
+border:1px solid #cbd5e1;
+
+border-radius:10px;
+
+font-size:15px;
+
+}
+
+
+
+.edit-topic-page button{
+
+margin-top:30px;
+
+width:220px;
+
+padding:14px;
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-weight:600;
+
+}
+
+
+
+.edit-topic-page button:hover{
+
+background:#1d4ed8;
+
+}
