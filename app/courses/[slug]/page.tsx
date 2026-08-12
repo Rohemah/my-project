@@ -26,13 +26,18 @@ export default async function CourseDetails({
   const { slug } = await params;
 
   // const course = courses.find((c) => c.slug === slug);
-  const response = await fetch(
-  `http://localhost:3000/api/course-by-slug/${slug}`,
+//   const response = await fetch(
+//   `http://localhost:3000/api/course-by-slug/${slug}`,
+//   {
+//     cache: "no-store",
+//   }
+// );
+const response = await fetch(
+  `${process.env.NEXTAUTH_URL}/api/course-by-slug/${slug}`,
   {
     cache: "no-store",
   }
 );
-
 const course = await response.json();
 
   if (!course) {

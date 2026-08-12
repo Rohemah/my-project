@@ -780,12 +780,18 @@ export default async function BlogDetails({
   // GET RELATED BLOGS
   // =====================================================
 
+  // const relatedResponse = await fetch(
+  //   "http://localhost:3000/api/blogs",
+  //   {
+  //     cache: "no-store",
+  //   }
+  // );
   const relatedResponse = await fetch(
-    "http://localhost:3000/api/blogs",
-    {
-      cache: "no-store",
-    }
-  );
+  `${process.env.NEXTAUTH_URL}/api/blogs`,
+  {
+    cache: "no-store",
+  }
+);
 
   const blogs: RelatedBlog[] = relatedResponse.ok
     ? await relatedResponse.json()
