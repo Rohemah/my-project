@@ -127,45 +127,64 @@ model CourseInstructor {
 }
 
 model Blog {
-  id         Int           @id @default(autoincrement())
+  id         Int @id @default(autoincrement())
   categoryId Int
-  title      String
-  slug       String        @unique
-  author     String
-  date       DateTime
-  image      String?
-  image2     String?
-  video      String?
+
+  title String
+  slug  String @unique
+
+  author      String
+  authorRole  String?
+  authorImage String?
+  authorLink  String?
+
+  date  DateTime
+  image String?
+
   articleOne String?
   articleTwo String?
-  category   Category      @relation(fields: [categoryId], references: [id])
-  lists      BlogList[]
-  sections   BlogSection[]
+
+  category Category @relation(fields: [categoryId], references: [id])
+
+  sections BlogSection[]
+  lists    BlogList[]
 }
 
 model BlogSection {
-  id           Int    @id @default(autoincrement())
-  blogId       Int
-  heading      String
-  paragraph    String
+  id     Int @id @default(autoincrement())
+  blogId Int
+
+  heading      String?
+  paragraph    String?
+  image        String?
+  video        String?
   displayOrder Int
-  blog         Blog   @relation(fields: [blogId], references: [id])
+
+  blog Blog @relation(fields: [blogId], references: [id])
+
+  lists BlogList[]
 }
 
 model BlogList {
-  id            Int            @id @default(autoincrement())
-  blogId        Int
+  id        Int  @id @default(autoincrement())
+  blogId    Int
+  sectionId Int?
+
   listHeading   String
   listParagraph String?
-  blog          Blog           @relation(fields: [blogId], references: [id])
-  items         BlogListItem[]
+
+  blog    Blog         @relation(fields: [blogId], references: [id])
+  section BlogSection? @relation(fields: [sectionId], references: [id])
+
+  items BlogListItem[]
 }
 
 model BlogListItem {
-  id       Int      @id @default(autoincrement())
+  id       Int    @id @default(autoincrement())
   listId   Int
   itemText String
-  list     BlogList @relation(fields: [listId], references: [id])
+
+  list BlogList @relation(fields: [listId], references: [id])
 }
 
 model Enrollment {
