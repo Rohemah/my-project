@@ -59,8 +59,7 @@ const [loading, setLoading] = useState(true);
           className="home-img"
           src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68d6756469d6d86ed2724125_d5927a39758818c9a689976dbbf45b91_koursio-home-three-banner-bg.avif"
           alt="Background"
-          width={1200}
-          height={570}
+        
         />
        
           <HomeNavbar />
