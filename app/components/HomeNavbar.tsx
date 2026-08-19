@@ -12,11 +12,11 @@ export default function HomeNavbar() {
         <h2>Vistario</h2>
       </div>
 
-      <div className="home-course">
+      {/* <div className="home-course">
        
         <span>All Courses</span>
         
-      </div>
+      </div> */}
 
       <nav className="home-links">
         <Link href="/">Home </Link>

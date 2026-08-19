@@ -35,14 +35,14 @@ useEffect(() => {
 
   loadBlogs();
 }, []);
-  if (loading) {
-  return <h2>Loading...</h2>;
-}
+//   if (loading) {
+//   return <h2>Loading...</h2>;
+// }
     return(
   <>
   <header>
          <img
-           className="blog-img " data-aos="zoom-out"
+           className="blog-img " 
            src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68f89f18965b03225f6067e3_30f8abb52fabe74ce7e6ce61febcfe33_koursio-blog-one-hero-p-2000.webp"
            alt="Background"
           

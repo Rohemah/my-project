@@ -46,9 +46,9 @@ const [loading, setLoading] = useState(true);
 
   fetchCourses();
 }, []);
-if (loading) {
-  return <h2>Loading courses...</h2>;
-}
+// if (loading) {
+//   return <h2>Loading courses...</h2>;
+// }
   return (
     
     
@@ -59,7 +59,7 @@ if (loading) {
           className="home-img"
           src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68d6756469d6d86ed2724125_d5927a39758818c9a689976dbbf45b91_koursio-home-three-banner-bg.avif"
           alt="Background"
-          width={1260}
+          width={1200}
           height={570}
         />
        

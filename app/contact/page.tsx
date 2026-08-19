@@ -16,7 +16,7 @@ export default function contact(){
         <>
         <header>
                  <img
-                   className="contact-img" data-aos="zoom-out"
+                   className="contact-img" 
                    src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e6294bd9f7904c98646141_eb95972bd8e7dcd08aaa465e39f508e1_koursio-contact-two-hero-p-2000.webp"
                    alt="Background"
                   

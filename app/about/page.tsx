@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 
-import { blogs } from "@/app/data/blogs";
-import { useEffect } from "react";
+// import { blogs } from "@/app/data/blogs";
+// import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import HomeNavbar from "../components/HomeNavbar";
@@ -12,8 +13,22 @@ import TestimonialSlider from "../components/TestimonialSlider";
 import Brands from "../components/Brands";
 
 import { BsCart3 } from "react-icons/bs";
+interface Blog {
+  id: number;
+  title: string;
+  slug: string;
+  image: string | null;
+  date: string;
+
+  category?: {
+    id: number;
+    name: string;
+  };
+}
 
 export default function About() {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+const [loadingBlogs, setLoadingBlogs] = useState(true);
    useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -21,49 +36,38 @@ export default function About() {
       easing: "ease-in-out",
     });
   }, []);
+   // Get latest blogs
+  useEffect(() => {
+    async function getBlogs() {
+      try {
+        const res = await fetch("/api/blogs");
+
+        if (!res.ok) {
+          throw new Error("Failed to fetch blogs");
+        }
+
+        const data: Blog[] = await res.json();
+
+        setBlogs(data);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      } finally {
+        setLoadingBlogs(false);
+      }
+    }
+
+    getBlogs();
+  }, []);
   return (
    <>
    <header>
            <img
-             className="about-img"    data-aos="zoom-out"
+             className="about-img"   
              src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e36e5005bd3ca3979077f5_e0c0a6e0fd2d1e6b04e957962d96c1f1_koursio-about-one-hero-background-p-2000.webp"
              alt="Background"
             
            />
-           {/* <div className="navbar">
-             <div className="logo">
-               <h2>Vistario</h2>
-             </div>
-             <div className="link-button">
-               <div className="navbar-link">
-                 <nav>
-                   <ul className="nav-links">
-                     <li className="dropdown">
-     <a href="/">Home </a>
-   
-     
-   </li>
-                     <li>
-                       <a href="/about">Pages</a>
-                     </li>
-                     <li>
-                       <a href="/blog">Blog</a>
-                     </li>
-                     <li>
-                       <a href="/contact">Contact</a>
-                     </li>
-                   </ul>
-                 </nav>
-               </div>
-               <div className="right-side">
-                 <div className="cart">
-                   <BsCart3 />
-                 </div>
-   
-                 <button className="btn">Sign In</button>
-               </div>
-             </div>
-           </div> */}
+        
               <HomeNavbar />
          </header>
          <section className="about-hero">
@@ -397,84 +401,6 @@ export default function About() {
 </section>
 <Brands/>
 
-{/* <section className="brands">
-
-  <h2 data-aos="fade-up" >Advance your future with skill-enhancing certifications</h2>
-
-  <div className="marquee">
-
-    <div className="track"> */}
-
-      {/* First Set */}
-
-    
-
-
-      {/* <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea34b92754a4e6fd7adf_koursio-hero-one-client-logo-ix.svg" alt="" />
-        <h3>MindWing</h3>
-      </div>
-
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea3324e2c07b913858cb_koursio-hero-one-client-logo-three.svg" alt="" />
-        <h3>EduGroup</h3>
-      </div>
-
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea34405e389390e61bbd_koursio-hero-one-client-logo-two.svg" alt="" />
-        <h3>LearnNet</h3>
-      </div>
-
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea3324e2c07b913858cb_koursio-hero-one-client-logo-three.svg" alt="" />
-        <h3>SkillBox</h3>
-      </div>
-
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea3484d24fe429db4f9c_koursio-hero-one-client-logo-four.svg" alt="" />
-        <h3>AcadRise</h3>
-      </div>
-
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea33562a8bdf5c7d67fd_koursio-hero-one-client-logo-five.svg" alt="" />
-        <h3>TechPath</h3>
-      </div>
-      
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea34b92754a4e6fd7adf_koursio-hero-one-client-logo-ix.svg" alt="" />
-        <h3>MindWing</h3>
-      </div>
-
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea3324e2c07b913858cb_koursio-hero-one-client-logo-three.svg" alt="" />
-        <h3>EduGroup</h3>
-      </div>
-
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea34405e389390e61bbd_koursio-hero-one-client-logo-two.svg" alt="" />
-        <h3>LearnNet</h3>
-      </div>
-
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea3324e2c07b913858cb_koursio-hero-one-client-logo-three.svg" alt="" />
-        <h3>SkillBox</h3>
-      </div>
-
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea3484d24fe429db4f9c_koursio-hero-one-client-logo-four.svg" alt="" />
-        <h3>AcadRise</h3>
-      </div>
-
-      <div className="brand">
-        <img src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68ccea33562a8bdf5c7d67fd_koursio-hero-one-client-logo-five.svg" alt="" />
-        <h3>TechPath</h3>
-      </div>
-
-    </div>
-
-  </div>
-
-</section> */}
 <section className="mentor">
   <div className="mentor-container">
 
@@ -508,7 +434,7 @@ export default function About() {
 </section>
 <TestimonialSlider/>
  
-        <section className="blog-section">
+        {/* <section className="blog-section">
 
   <p className="blog-subtitle" data-aos="fade-up">
     INSIGHTS & IDEAS
@@ -554,6 +480,66 @@ export default function About() {
       </Link>
 
     ))}
+
+  </div>
+
+</section> */}
+<section className="blog-section">
+
+  <p className="blog-subtitle" data-aos="fade-up">
+    INSIGHTS & IDEAS
+  </p>
+
+  <h2 className="blog-title" data-aos="fade-up">
+    Checkout our latest posts
+  </h2>
+
+  <div className="blog-grid">
+
+    {loadingBlogs ? (
+      <p>Loading latest posts...</p>
+    ) : blogs.length === 0 ? (
+      <p>No blogs available.</p>
+    ) : (
+      blogs.slice(0, 3).map((blog) => (
+
+        <Link
+          key={blog.id}
+          href={`/blog/${blog.slug}`}
+          className="blog-link"
+        >
+
+          <div className="blog-card">
+
+            {blog.image && (
+              <img
+                src={blog.image}
+                alt={blog.title}
+              />
+            )}
+
+            <div className="blog-content">
+
+              {blog.category?.name && (
+                <span className="category">
+                  {blog.category.name}
+                </span>
+              )}
+
+              <h3>{blog.title}</h3>
+
+              <p className="date">
+                {new Date(blog.date).toLocaleDateString()}
+              </p>
+
+            </div>
+
+          </div>
+
+        </Link>
+
+      ))
+    )}
 
   </div>
 

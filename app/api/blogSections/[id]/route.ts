@@ -287,6 +287,175 @@
 //   }
 // }
 
+// import { NextResponse } from "next/server";
+// import { prisma } from "@/lib/prisma";
+
+// // ========================================
+// // GET BLOG SECTION BY ID
+// // ========================================
+
+// export async function GET(
+//   request: Request,
+//   { params }: { params: Promise<{ id: string }> }
+// ) {
+//   try {
+//     const { id } = await params;
+
+//     const section = await prisma.blogSection.findUnique({
+//       where: {
+//         id: Number(id),
+//       },
+
+//       include: {
+//         blog: true,
+//       },
+//     });
+
+//     if (!section) {
+//       return NextResponse.json(
+//         {
+//           error: "Blog section not found",
+//         },
+//         {
+//           status: 404,
+//         }
+//       );
+//     }
+
+//     return NextResponse.json(section);
+//   } catch (error) {
+//     console.error("GET Blog Section Error:", error);
+
+//     return NextResponse.json(
+//       {
+//         error: String(error),
+//       },
+//       {
+//         status: 500,
+//       }
+//     );
+//   }
+// }
+
+// // ========================================
+// // UPDATE BLOG SECTION
+// // ========================================
+
+// export async function PUT(
+//   request: Request,
+//   { params }: { params: Promise<{ id: string }> }
+// ) {
+//   try {
+//     const { id } = await params;
+
+//     const body = await request.json();
+
+//     // ========================================
+//     // VALIDATION
+//     // ========================================
+
+//     if (!body.blogId) {
+//       return NextResponse.json(
+//         {
+//           error: "Blog is required",
+//         },
+//         {
+//           status: 400,
+//         }
+//       );
+//     }
+
+//     if (!body.heading?.trim()) {
+//       return NextResponse.json(
+//         {
+//           error: "Heading is required",
+//         },
+//         {
+//           status: 400,
+//         }
+//       );
+//     }
+
+//     if (!body.paragraph?.trim()) {
+//       return NextResponse.json(
+//         {
+//           error: "Paragraph is required",
+//         },
+//         {
+//           status: 400,
+//         }
+//       );
+//     }
+
+//     // ========================================
+//     // UPDATE BLOG SECTION
+//     // ========================================
+
+//     const section = await prisma.blogSection.update({
+//       where: {
+//         id: Number(id),
+//       },
+
+//       data: {
+//         blogId: Number(body.blogId),
+
+//         heading: body.heading.trim(),
+
+//         paragraph: body.paragraph.trim(),
+
+//         displayOrder: Number(body.displayOrder),
+//       },
+//     });
+
+//     return NextResponse.json(section);
+//   } catch (error) {
+//     console.error("UPDATE Blog Section Error:", error);
+
+//     return NextResponse.json(
+//       {
+//         error: String(error),
+//       },
+//       {
+//         status: 500,
+//       }
+//     );
+//   }
+// }
+
+// // ========================================
+// // DELETE BLOG SECTION
+// // ========================================
+
+// export async function DELETE(
+//   request: Request,
+//   { params }: { params: Promise<{ id: string }> }
+// ) {
+//   try {
+//     const { id } = await params;
+
+//     const section = await prisma.blogSection.delete({
+//       where: {
+//         id: Number(id),
+//       },
+//     });
+
+//     return NextResponse.json({
+//       message: "Blog section deleted successfully",
+//       section,
+//     });
+//   } catch (error) {
+//     console.error("DELETE Blog Section Error:", error);
+
+//     return NextResponse.json(
+//       {
+//         error: String(error),
+//       },
+//       {
+//         status: 500,
+//       }
+//     );
+//   }
+// }
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
@@ -387,6 +556,17 @@ export async function PUT(
       );
     }
 
+    if (!body.displayOrder) {
+      return NextResponse.json(
+        {
+          error: "Display order is required",
+        },
+        {
+          status: 400,
+        }
+      );
+    }
+
     // ========================================
     // UPDATE BLOG SECTION
     // ========================================
@@ -397,11 +577,39 @@ export async function PUT(
       },
 
       data: {
+        // ========================================
+        // BLOG
+        // ========================================
+
         blogId: Number(body.blogId),
+
+        // ========================================
+        // HEADING
+        // ========================================
 
         heading: body.heading.trim(),
 
+        // ========================================
+        // PARAGRAPH
+        // ========================================
+
         paragraph: body.paragraph.trim(),
+
+        // ========================================
+        // IMAGE
+        // ========================================
+
+        image: body.image?.trim() || null,
+
+        // ========================================
+        // VIDEO
+        // ========================================
+
+        video: body.video?.trim() || null,
+
+        // ========================================
+        // DISPLAY ORDER
+        // ========================================
 
         displayOrder: Number(body.displayOrder),
       },
