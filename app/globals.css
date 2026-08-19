@@ -6,17 +6,15 @@
     padding: 0;
     box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-    overflow-x: hidden;
-
 }
 
 
 /* Home 3 Css */
 .home-img{
+  overflow:hidden;
   width: 100%;
-  height: 570px;
-  object-fit: cover;
-  display: block;
+  height: 650px;
+  
 
 
 }
@@ -25,8 +23,6 @@
 
 header{
     position:relative;
-      width: 100%;
-  overflow: hidden;
 }
 
 .img{
