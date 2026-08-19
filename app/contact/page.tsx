@@ -1,237 +1,491 @@
+// "use client";
+// import HomeNavbar from "../components/HomeNavbar";
+// import { useState } from "react";
+// import FooterCTA from "../components/FooterCTA";
+// import Footer from "../components/Footer";
+// import FAQ from "../components/FAQ";
+
+// import { BsCart3 } from "react-icons/bs";
+// import {
+//   Accordion,
+//   AccordionContent,
+//   AccordionItem,
+//   AccordionTrigger,
+// } from "@/components/ui/accordion";
+// import CourseFAQ from "../components/CourseFAQ";
+// export default function contact(){
+//     return(
+//         <>
+//         <header>
+//                  <img
+//                    className="contact-img" 
+//                    src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e6294bd9f7904c98646141_eb95972bd8e7dcd08aaa465e39f508e1_koursio-contact-two-hero-p-2000.webp"
+//                    alt="Background"
+                  
+//                  />
+//                  {/* <div className="navbar">
+//                    <div className="logo">
+//                      <h2>Vistario</h2>
+//                    </div>
+//                    <div className="link-button">
+//                      <div className="navbar-link">
+//                        <nav>
+//                          <ul className="nav-links">
+//                            <li className="dropdown">
+//            <a href="/">Home </a>
+         
+          
+//          </li>
+//                            <li>
+//                              <a href="/about">About</a>
+//                            </li>
+//                            <li>
+//                              <a href="/blog">Blog</a>
+//                            </li>
+//                            <li>
+//                              <a href="/contact">Contact</a>
+//                            </li>
+//                          </ul>
+//                        </nav>
+//                      </div>
+//                      <div className="right-side">
+//                        <div className="cart">
+//                          <BsCart3 />
+//                        </div>
+         
+//                        <button className="btn">Sign In</button>
+//                      </div>
+//                    </div>
+//                  </div>  */}
+//                  <HomeNavbar/>
+//                </header>
+//                  <section className="about-hero">
+//                     <div className="about-hero-content">
+//                         <p >
+//                           CONNECT WITH US
+        
+//                         </p>
+//                         <h2>
+//                            Join our network
+//                         </h2>
+//                     </div> 
+                   
+//                  </section>
+          
+//     <section className="contact">
+
+//       <div className="contact-left">
+
+//         <p className="contact-tag" data-aos="fade-up">
+//           CONTACT US
+//         </p>
+
+//         <h2 data-aos="fade-up">
+//           Are you interested in online learning? Contact us
+//         </h2>
+
+//         <p className="contact-text" data-aos="fade-up">
+//           We'd love to hear from you! Whether you have questions about our
+//           courses, need help choosing the right program, or want to know
+//           more about enrollment, our team is here to assist you every
+//           step of the way.
+//         </p>
+
+//         <img
+//           className="signature" data-aos="fade-up"
+//           src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e62c898e2af64e7838ef4a_8718a72703d2fbbc1d53d3f396ebf6e4_Signature.svg"
+//           alt=""
+//         />
+
+//         <h4 data-aos="fade-up">Ethan Walker</h4>
+
+//         <span data-aos="fade-up">DIRECTOR</span>
+
+//       </div>
+
+//       <div className="contact-right">
+
+//         <h3>Fill out for contact</h3>
+
+//         <p>
+//           Reach out and our team will connect with you shortly.
+//         </p>
+
+//         <form>
+
+//           <input
+//             type="text"
+//             placeholder="Your name*"
+//           />
+
+//           <input
+//             type="email"
+//             placeholder="Your email*"
+//           />
+
+//           <input
+//             type="text"
+//             placeholder="Subject"
+//           />
+
+//           <textarea
+           
+//             placeholder="Your message*" rows={7}
+//           ></textarea>
+
+//           <label className="check">
+
+//             <input type="checkbox" />
+
+//             Save information for the next connection.
+
+//           </label>
+
+//           <button>
+//             Send message →
+//           </button>
+
+//         </form>
+
+//       </div>
+
+//     </section>
+//     <section className="contact-heading">
+//         <p data-aos="fade-up">CONTACT DETAILS</p>
+//         <h3 data-aos="fade-up">Find our location</h3>
+//     </section>
+//     <section className="contact-details" data-aos="fade-up">
+   
+
+      
+       
+//       <div className="highlight-box">
+
+//         <div className="highlight-icon">
+//           <img
+//             src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e62d2f9ed2c17ad23ee057_Home%20Icon.svg"
+//             alt=""
+//           />
+//         </div>
+
+
+
+//         <div>
+//           <h3>Area location</h3>
+
+//           <p>
+//           410 Sandtown, California <br /> 94001, USA
+//           </p>
+//         </div>
+
+//       </div>
+
+//       <div className="divider" data-aos="fade-up"></div>
+
+//       <div className="highlight-box">
+
+//         <div className="highlight-icon">
+//           <img
+//             src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e62d2f9ed2c17ad23ee058_Books%20Icon.svg"
+//             alt=""
+//           />
+//         </div>
+
+//         <div>
+//           <h3>Contact details</h3>
+
+//           <a href="phone">888-123-4567</a> <br />
+//           <a href="mail">info@example.com</a>
+//         </div>
+
+//       </div>
+
+//       <div className="divider " data-aos="fade-up"></div>
+
+//       <div className="highlight-box">
+
+//         <div className="highlight-icon">
+//           <img
+//             src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e7a4040663862cc448e344_rt-about-one-up-to-date.svg"
+//             alt=""
+//           />
+//         </div>
+
+//         <div>
+//           <h3>Opening hours</h3>
+
+//           <p>
+//             Monday-Friday  <br />
+//          10:30a.m-7:00p.m
+//           </p>
+//         </div>
+
+//       </div>
+
+//     </section>
+  
+//    <FAQ/> 
+ 
+
+// <FooterCTA/>
+// <Footer/>
+   
+
+    
+ 
+//         </>
+//     )
+
+// }
+"use client";
+
+import { useState } from "react";
+
 import HomeNavbar from "../components/HomeNavbar";
 import FooterCTA from "../components/FooterCTA";
 import Footer from "../components/Footer";
 import FAQ from "../components/FAQ";
 
-import { BsCart3 } from "react-icons/bs";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import CourseFAQ from "../components/CourseFAQ";
-export default function contact(){
-    return(
-        <>
-        <header>
-                 <img
-                   className="contact-img" 
-                   src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e6294bd9f7904c98646141_eb95972bd8e7dcd08aaa465e39f508e1_koursio-contact-two-hero-p-2000.webp"
-                   alt="Background"
-                  
-                 />
-                 {/* <div className="navbar">
-                   <div className="logo">
-                     <h2>Vistario</h2>
-                   </div>
-                   <div className="link-button">
-                     <div className="navbar-link">
-                       <nav>
-                         <ul className="nav-links">
-                           <li className="dropdown">
-           <a href="/">Home </a>
-         
-          
-         </li>
-                           <li>
-                             <a href="/about">About</a>
-                           </li>
-                           <li>
-                             <a href="/blog">Blog</a>
-                           </li>
-                           <li>
-                             <a href="/contact">Contact</a>
-                           </li>
-                         </ul>
-                       </nav>
-                     </div>
-                     <div className="right-side">
-                       <div className="cart">
-                         <BsCart3 />
-                       </div>
-         
-                       <button className="btn">Sign In</button>
-                     </div>
-                   </div>
-                 </div>  */}
-                 <HomeNavbar/>
-               </header>
-                 <section className="about-hero">
-                    <div className="about-hero-content">
-                        <p >
-                          CONNECT WITH US
-        
-                        </p>
-                        <h2>
-                           Join our network
-                        </h2>
-                    </div> 
-                   
-                 </section>
-          
-    <section className="contact">
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-      <div className="contact-left">
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
 
-        <p className="contact-tag" data-aos="fade-up">
-          CONTACT US
-        </p>
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-        <h2 data-aos="fade-up">
-          Are you interested in online learning? Contact us
-        </h2>
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-        <p className="contact-text" data-aos="fade-up">
-          We'd love to hear from you! Whether you have questions about our
-          courses, need help choosing the right program, or want to know
-          more about enrollment, our team is here to assist you every
-          step of the way.
-        </p>
+    setLoading(true);
+    setStatus("");
 
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus("Your message has been sent successfully!");
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setStatus(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      console.error("Contact form error:", error);
+      setStatus("Unable to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <>
+      <header>
         <img
-          className="signature" data-aos="fade-up"
-          src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e62c898e2af64e7838ef4a_8718a72703d2fbbc1d53d3f396ebf6e4_Signature.svg"
-          alt=""
+          className="contact-img"
+          src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e6294bd9f7904c98646141_eb95972bd8e7dcd08aaa465e39f508e1_koursio-contact-two-hero-p-2000.webp"
+          alt="Background"
         />
 
-        <h4 data-aos="fade-up">Ethan Walker</h4>
+        <HomeNavbar />
+      </header>
 
-        <span data-aos="fade-up">DIRECTOR</span>
+      <section className="about-hero">
+        <div className="about-hero-content">
+          <p>CONNECT WITH US</p>
 
-      </div>
+          <h2>Join our network</h2>
+        </div>
+      </section>
 
-      <div className="contact-right">
+      <section className="contact">
+        <div className="contact-left">
+          <p className="contact-tag" data-aos="fade-up">
+            CONTACT US
+          </p>
 
-        <h3>Fill out for contact</h3>
+          <h2 data-aos="fade-up">
+            Are you interested in online learning? Contact us
+          </h2>
 
-        <p>
-          Reach out and our team will connect with you shortly.
-        </p>
+          <p className="contact-text" data-aos="fade-up">
+            We'd love to hear from you! Whether you have questions about our
+            courses, need help choosing the right program, or want to know
+            more about enrollment, our team is here to assist you every
+            step of the way.
+          </p>
 
-        <form>
-
-          <input
-            type="text"
-            placeholder="Your name*"
+          <img
+            className="signature"
+            data-aos="fade-up"
+            src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e62c898e2af64e7838ef4a_8718a72703d2fbbc1d53d3f396ebf6e4_Signature.svg"
+            alt=""
           />
 
-          <input
-            type="email"
-            placeholder="Your email*"
-          />
+          <h4 data-aos="fade-up">Ethan Walker</h4>
 
-          <input
-            type="text"
-            placeholder="Subject"
-          />
+          <span data-aos="fade-up">DIRECTOR</span>
+        </div>
 
-          <textarea
-           
-            placeholder="Your message*" rows={7}
-          ></textarea>
+        <div className="contact-right">
+          <h3>Fill out for contact</h3>
 
-          <label className="check">
+          <p>
+            Reach out and our team will connect with you shortly.
+          </p>
 
-            <input type="checkbox" />
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name*"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-            Save information for the next connection.
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email*"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-          </label>
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
+            />
 
-          <button>
-            Send message →
-          </button>
+            <textarea
+              name="message"
+              placeholder="Your message*"
+              rows={7}
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
 
-        </form>
+            <label className="check">
+              <input type="checkbox" />
 
-      </div>
+              Save information for the next connection.
+            </label>
 
-    </section>
-    <section className="contact-heading">
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send message →"}
+            </button>
+
+            {status && (
+              <p className="form-status">
+                {status}
+              </p>
+            )}
+          </form>
+        </div>
+      </section>
+
+      <section className="contact-heading">
         <p data-aos="fade-up">CONTACT DETAILS</p>
+
         <h3 data-aos="fade-up">Find our location</h3>
-    </section>
-    <section className="contact-details" data-aos="fade-up">
-   
+      </section>
 
-      
-       
-      <div className="highlight-box">
+      <section className="contact-details" data-aos="fade-up">
+        <div className="highlight-box">
+          <div className="highlight-icon">
+            <img
+              src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e62d2f9ed2c17ad23ee057_Home%20Icon.svg"
+              alt=""
+            />
+          </div>
 
-        <div className="highlight-icon">
-          <img
-            src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e62d2f9ed2c17ad23ee057_Home%20Icon.svg"
-            alt=""
-          />
+          <div>
+            <h3>Area location</h3>
+
+            <p>
+              410 Sandtown, California <br />
+              94001, USA
+            </p>
+          </div>
         </div>
 
+        <div className="divider" data-aos="fade-up"></div>
 
+        <div className="highlight-box">
+          <div className="highlight-icon">
+            <img
+              src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e62d2f9ed2c17ad23ee058_Books%20Icon.svg"
+              alt=""
+            />
+          </div>
 
-        <div>
-          <h3>Area location</h3>
+          <div>
+            <h3>Contact details</h3>
 
-          <p>
-          410 Sandtown, California <br /> 94001, USA
-          </p>
+            <a href="tel:8881234567">888-123-4567</a>
+            <br />
+
+            <a href="mailto:info@example.com">info@example.com</a>
+          </div>
         </div>
 
-      </div>
+        <div className="divider" data-aos="fade-up"></div>
 
-      <div className="divider" data-aos="fade-up"></div>
+        <div className="highlight-box">
+          <div className="highlight-icon">
+            <img
+              src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e7a4040663862cc448e344_rt-about-one-up-to-date.svg"
+              alt=""
+            />
+          </div>
 
-      <div className="highlight-box">
+          <div>
+            <h3>Opening hours</h3>
 
-        <div className="highlight-icon">
-          <img
-            src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e62d2f9ed2c17ad23ee058_Books%20Icon.svg"
-            alt=""
-          />
+            <p>
+              Monday-Friday
+              <br />
+              10:30a.m-7:00p.m
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div>
-          <h3>Contact details</h3>
+      <FAQ />
 
-          <a href="phone">888-123-4567</a> <br />
-          <a href="mail">info@example.com</a>
-        </div>
+      <FooterCTA />
 
-      </div>
-
-      <div className="divider " data-aos="fade-up"></div>
-
-      <div className="highlight-box">
-
-        <div className="highlight-icon">
-          <img
-            src="https://cdn.prod.website-files.com/68b824698be8e7c047a5da51/68e7a4040663862cc448e344_rt-about-one-up-to-date.svg"
-            alt=""
-          />
-        </div>
-
-        <div>
-          <h3>Opening hours</h3>
-
-          <p>
-            Monday-Friday  <br />
-         10:30a.m-7:00p.m
-          </p>
-        </div>
-
-      </div>
-
-    </section>
-  
-   <FAQ/> 
- 
-
-<FooterCTA/>
-<Footer/>
-   
-
-    
- 
-        </>
-    )
-
+      <Footer />
+    </>
+  );
 }

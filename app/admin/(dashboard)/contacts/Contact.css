@@ -1,0 +1,109 @@
+.contact-page {
+  padding: 30px;
+  width: 100%;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contact-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.contact-header p {
+  margin-top: 8px;
+  color: #777;
+  font-size: 14px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.table-container th {
+  text-align: left;
+  padding: 16px;
+  background: #f7f7f7;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+}
+
+.table-container td {
+  padding: 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.table-container tbody tr:hover {
+  background: #fafafa;
+}
+
+.email-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.message-cell {
+  max-width: 300px;
+  min-width: 250px;
+  line-height: 1.5;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.delete-btn {
+  border: none;
+  background: #ef4444;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.delete-btn:hover {
+  opacity: 0.85;
+}
+
+.empty-state {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-state h2 {
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #777;
+}
